@@ -1,0 +1,137 @@
+! name: Quality Sources
+! description: Boost-only Goggle that lifts primary sources, research, documentation, independent journalism and open-source projects. Nothing is filtered or downranked.
+! public: false
+! author: wizrdfab
+! license: CC0
+
+! ======================================================================
+! HOW TO TUNE THIS FILE
+! - Boost strength runs 1-10. Tiers below: 4 = strongest, 2 = gentle.
+! - There are no $discard or $downrank rules, so nothing is hidden.
+! - If one site dominates too many results, lower its number.
+! - Matching works on the URL only, not on page content.
+! ======================================================================
+
+
+! ----------------------------------------------------------------------
+! 1. GOVERNMENT, INTERNATIONAL BODIES AND ACADEMIA (primary sources)
+! ----------------------------------------------------------------------
+$boost=4,site=.gov
+$boost=4,site=.edu
+$boost=4,site=.ac.uk
+$boost=4,site=nih.gov
+$boost=4,site=who.int
+$boost=4,site=europa.eu
+$boost=4,site=un.org
+$boost=3,site=worldbank.org
+$boost=3,site=oecd.org
+$boost=3,site=nasa.gov
+$boost=3,site=sec.gov
+$boost=3,site=ftc.gov
+
+
+! ----------------------------------------------------------------------
+! 2. RESEARCH, SCIENCE AND SCHOLARSHIP
+! ----------------------------------------------------------------------
+$boost=4,site=arxiv.org
+$boost=4,site=pubmed.ncbi.nlm.nih.gov
+$boost=3,site=nature.com
+$boost=3,site=science.org
+$boost=3,site=plos.org
+$boost=3,site=biorxiv.org
+$boost=3,site=ssrn.com
+$boost=3,site=doaj.org
+$boost=3,site=cochranelibrary.com
+$boost=3,site=quantamagazine.org
+$boost=3,site=plato.stanford.edu
+$boost=3,site=iep.utm.edu
+
+
+! ----------------------------------------------------------------------
+! 3. REFERENCE, LIBRARIES AND LEARNING
+! ----------------------------------------------------------------------
+$boost=3,site=wikipedia.org
+$boost=3,site=britannica.com
+$boost=3,site=archive.org
+$boost=3,site=gutenberg.org
+$boost=3,site=standardebooks.org
+$boost=3,site=openlibrary.org
+$boost=3,site=ocw.mit.edu
+$boost=2,site=khanacademy.org
+
+
+! ----------------------------------------------------------------------
+! 4. OPEN SOURCE, STANDARDS AND TECHNICAL DOCUMENTATION
+! ----------------------------------------------------------------------
+$boost=4,site=developer.mozilla.org
+$boost=4,site=w3.org
+$boost=4,site=ietf.org
+$boost=4,site=rfc-editor.org
+$boost=3,site=mozilla.org
+$boost=3,site=kernel.org
+$boost=3,site=gnu.org
+$boost=3,site=debian.org
+$boost=3,site=wiki.archlinux.org
+$boost=3,site=apache.org
+$boost=3,site=python.org
+$boost=3,site=postgresql.org
+$boost=3,site=rust-lang.org
+$boost=3,site=opensource.org
+$boost=3,site=linuxfoundation.org
+$boost=3,site=lwn.net
+$boost=2,site=github.com
+$boost=2,site=gitlab.com
+$boost=2,site=codeberg.org
+$boost=2,site=stackoverflow.com
+$boost=2,site=stackexchange.com
+$boost=2,site=lobste.rs
+
+
+! ----------------------------------------------------------------------
+! 5. PRIVACY, SECURITY AND DIGITAL RIGHTS
+! ----------------------------------------------------------------------
+$boost=3,site=eff.org
+$boost=3,site=privacyguides.org
+$boost=3,site=torproject.org
+$boost=3,site=signal.org
+$boost=2,site=fsf.org
+
+
+! ----------------------------------------------------------------------
+! 6. NEWS, FACT-CHECKING AND INDEPENDENT JOURNALISM
+! ----------------------------------------------------------------------
+$boost=3,site=reuters.com
+$boost=3,site=apnews.com
+$boost=3,site=propublica.org
+$boost=3,site=theconversation.com
+$boost=3,site=arstechnica.com
+$boost=3,site=factcheck.org
+$boost=3,site=fullfact.org
+$boost=2,site=snopes.com
+$boost=2,site=bbc.com
+
+
+! ----------------------------------------------------------------------
+! 7. HEALTH AND INDEPENDENT PRODUCT TESTING
+! ----------------------------------------------------------------------
+$boost=3,site=mayoclinic.org
+$boost=3,site=nhs.uk
+$boost=3,site=consumerreports.org
+$boost=3,site=rtings.com
+
+
+! ----------------------------------------------------------------------
+! 8. URL PATTERNS: pages that tend to hold real substance
+!    (gentle values; these patterns are common on many sites)
+! ----------------------------------------------------------------------
+/docs/$boost=2
+/documentation/$boost=2
+/manual/$boost=2
+/reference/$boost=2
+/spec/$boost=2
+/rfc/$boost=2
+/research/$boost=2
+/papers/$boost=2
+/publications/$boost=2
+/handbook/$boost=2
+/wiki/$boost=1
